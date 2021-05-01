@@ -1,21 +1,20 @@
-
-
-    <span style="text-align: center;">MiniCalculadora</span>
+<div class="container">
+<h1>{{title}}</h1>
 
 <br>
 <br>
 Introduce dos digitos:
 <br>
 
-<input type="number">
+<input type="number"  [(ngModel)]="a" name="a" class="form-control">
 <br>
-<input type="number">
+<input type="number" [(ngModel)]="b" name="b" class="form-control">
 <br>
 Selecciona Operacion:
 <br>
-<input type="button" name="sumar" value="Sumar">
-<input type="button" name="restar" value="Restar">
-<input type="button" name="multiplicar" value="Multiplicar">
+<input type="button" name="sumar" value="Sumar" (click)="sumar()" class="btn btn-primary"> 
+<input type="button" name="restar" value="Restar" (click)="restar()" class="btn btn-primary"> 
+<input type="button" name="multiplicar" value="Multiplicar" (click)="multiplicar()" class="btn btn-primary"> 
 <br>
-El resultado es: {{resultado}}
-  
+<h1>El resultado es: {{resultado}}</h1>
+</div> 
